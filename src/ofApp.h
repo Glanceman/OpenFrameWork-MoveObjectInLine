@@ -29,6 +29,7 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		float distance(Vec2f a, Vec2f b);
 		float findSlope(Vec2f a, Vec2f b);
+		void finishBtnEvent();
 		void gotMessage(ofMessage msg);
 
 		ofImage img;
@@ -39,7 +40,11 @@ class ofApp : public ofBaseApp{
 		ofxPanel gui;
 		ofxIntSlider lowThreshold;
 		ofxIntSlider lineVoteThreshold;
-		ofxIntSlider minLength;
-		ofxIntSlider maxGap;
+		ofxButton finishBtn;
+		bool bfinish = false;
+		int minLength;
+		int maxGap;
 		enum Direction {right,left} direction;
 };
+
+
